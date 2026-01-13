@@ -143,14 +143,15 @@ const Home: React.FC = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            {SERVICES.slice(0, 3).map((service) => (
+            {SERVICES.map((service) => (
               <div key={service.id} className="group bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden flex flex-col hover:shadow-xl transition-shadow">
                 <div className="h-48 overflow-hidden relative">
                    <img src={service.image} alt={service.title} className="w-full h-full object-contain" />
                 </div>
-                <div className="p-6 flex-grow">
+                <div className="p-6 flex-grow flex flex-col">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
-                  <Link to={`/aluguel-${service.slug}`} className="text-brand-primary font-bold hover:underline flex items-center gap-1">
+                  <p className="text-gray-600 text-sm mb-4 flex-grow whitespace-pre-wrap">{service.fullDescription}</p>
+                  <Link to={`/aluguel-${service.slug}`} className="text-brand-primary font-bold hover:underline flex items-center gap-1 mt-auto">
                     Ver detalhes <ArrowRight size={16} />
                   </Link>
                 </div>

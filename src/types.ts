@@ -1,3 +1,12 @@
+export interface ServiceSpecs {
+  altura?: string;
+  largura?: string;
+  comprimento?: string;
+  alturaAssento?: string;
+  volumeTanque?: string;
+  peso?: string;
+}
+
 export interface Service {
   id: string;
   title: string;
@@ -6,6 +15,7 @@ export interface Service {
   fullDescription: string;
   features: string[];
   image: string;
+  specs?: ServiceSpecs;
 }
 
 export interface Neighborhood {

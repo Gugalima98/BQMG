@@ -23,46 +23,51 @@ export const SERVICES: Service[] = [
     id: '1',
     title: 'Cabine Standard',
     slug: 'cabine-standard',
-    shortDescription: 'A solução econômica e eficiente para obras e eventos de pequeno porte.',
-    fullDescription: 'Nossa Cabine Standard é o modelo mais popular, ideal para canteiros de obras, feiras e eventos abertos. Fabricada em polietileno de alta densidade, oferece durabilidade e facilidade de limpeza.',
-    features: ['Caixa de detritos 220L', 'Mictório acoplado', 'Suporte para papel higiênico', 'Ventilação estratégica'],
-    image: cabineStandardImage
+    shortDescription: 'Banheiro Químico Standard: Conforto e praticidade em qualquer lugar.',
+    fullDescription: 'Desfrute de banheiros bem equipados e mantidos com padrões de higiene impecáveis.\n\nNossa opção de banheiro químico standard oferece uma solução prática e acessível para atender suas necessidades em eventos ou obras.',
+    features: ['Tanque de contenção de dejetos com assento', 'Tampa do assento', 'Mictório', 'Porta Objetos', 'Suporte para papel higiênico', 'Piso antiderrapante e teto translúcido'],
+    image: cabineStandardImage,
+    specs: { altura: "2,35m", largura: "1,10m", comprimento: "1,20m", alturaAssento: "460mm", volumeTanque: "280 litros", peso: "70 KG" }
   },
   {
     id: '2',
     title: 'Cabine VIP',
     slug: 'cabine-vip',
-    shortDescription: 'Mais conforto e higiene com sistema de descarga e pia interna.',
-    fullDescription: 'A Cabine VIP eleva o padrão do seu evento. Equipada com sistema de descarga recirculante e pia interna, proporciona uma experiência muito mais agradável aos usuários.',
-    features: ['Descarga recirculante', 'Pia com torneira', 'Espelho', 'Dispenser de sabão e papel toalha'],
-    image: cabineVipImage
+    shortDescription: 'Banheiros Químicos VIP: Luxo, higiene e sofisticação.',
+    fullDescription: 'Desfrute de banheiros bem equipados e mantidos com padrões de higiene impecáveis.\n\nNossa opção de banheiro químico VIP oferece uma solução prática e acessível para atender suas necessidades em eventos ou obras.',
+    features: ['Tanque de contenção de dejetos com assento', 'Tampa do assento', 'Mictório', 'Pia com capacidade de 60 litros de água, com acionamento através de bomba de pé;', 'Porta Objetos', 'Porta sabonete líquido;', 'Porta Papel Toalha;', 'Suporte para papel higiênico', 'Piso antiderrapante e teto translúcido'],
+    image: cabineVipImage,
+    specs: { altura: "2,35m", largura: "1,10m", comprimento: "1,20m", alturaAssento: "460mm", volumeTanque: "280 litros", peso: "80 KG" }
   },
   {
     id: '3',
     title: 'Cabine Luxo',
     slug: 'cabine-luxo',
-    shortDescription: 'O máximo em sofisticação para casamentos e eventos corporativos.',
-    fullDescription: 'Para ocasiões especiais, a Cabine Luxo é a escolha certa. Acabamento superior, maior espaço interno e iluminação diferenciada (opcional) para garantir total conforto.',
-    features: ['Acabamento premium', 'Assento almofadado', 'Lixeira interna', 'Espelho grande'],
-    image: cabineLuxoImage
+    shortDescription: 'Banheiros Químicos de Luxo: Exclusividade e higiene impecáveis.',
+    fullDescription: 'Desfrute de banheiros bem equipados e mantidos com padrões de higiene impecáveis.\n\nNossa opção de banheiro químico de luxo oferece uma solução prática e confortável para atender suas necessidades em eventos ou obras.\n\n*Cabines podem sofrer alterações',
+    features: ['Assoalho de madeira', 'Divisórias seguras e bonitas', 'Pias e sanitários de louça', 'Suporte para papel higiênico', 'Decoração elegante'],
+    image: cabineLuxoImage,
+    specs: { altura: "2,35m", largura: "1,10m", comprimento: "1,20m", alturaAssento: "460mm", volumeTanque: "280 litros", peso: "70 KG" }
   },
   {
     id: '4',
     title: 'Cabine PNE',
     slug: 'cabine-pne',
-    shortDescription: 'Acessibilidade garantida com amplo espaço e corrimãos de apoio.',
-    fullDescription: 'Conformidade total com as normas de acessibilidade. Nossa cabine PNE possui piso plano ao nível do solo, amplo espaço interno para giro de cadeira de rodas e corrimãos de apoio em todo o perímetro.',
-    features: ['Piso plano sem degraus', 'Corrimãos de segurança', 'Espaço para manobra 360º', 'Fechadura acessível'],
-    image: cabinePneImage
+    shortDescription: 'Banheiros Químicos PNE: Acessibilidade e conforto garantidos.',
+    fullDescription: 'Desfrute de banheiros adaptados para Pessoas com Necessidades Especiais (PNE), bem equipados e mantidos com padrões de higiene impecáveis.\n\nNossa opção de banheiro químico PNE oferece uma solução prática e acessível para atender suas necessidades em eventos ou obras.',
+    features: ['Tanque de contenção de dejetos com assento', 'Tampa do assento', 'Mictório', 'Pia com capacidade de 60 litros de água, com acionamento através de bomba de pé;', 'Porta Objetos', 'Porta sabonete líquido;', 'Porta Papel Toalha;', 'Suporte para papel higiênico', 'Piso antiderrapante e teto translúcido'],
+    image: cabinePneImage,
+    specs: { altura: "2,35m", largura: "1,10m", comprimento: "1,20m", alturaAssento: "460mm", volumeTanque: "280 litros", peso: "70 KG" }
   },
   {
     id: '5',
     title: 'Cabine Chuveiro',
     slug: 'cabine-chuveiro',
-    shortDescription: 'Ideal para campings, eventos esportivos e canteiros de obras.',
-    fullDescription: 'Garanta a higiene completa com nossas Cabines Chuveiro. Podem ser conectadas à rede de água e esgoto local ou utilizadas com reservatórios externos.',
-    features: ['Chuveiro com registro', 'Ralo sifonado', 'Ganchos para roupa', 'Piso antiderrapante'],
-    image: cabineChuveiroImage
+    shortDescription: 'Cabines com Chuveiro: Conforto e praticidade para você.',
+    fullDescription: 'Desfrute de banheiros bem equipados e mantidos com padrões de higiene impecáveis.\n\nNossa opção de banheiro químico com chuveiro oferece uma solução prática e acessível para atender suas necessidades em eventos ou obras.',
+    features: ['Cabine em polietileno de alta densidade', 'Chuveiro elétrico', 'Ralo sifonado para escoamento da água', 'Piso antiderrapante'],
+    image: cabineChuveiroImage,
+    specs: { altura: "2,35m", largura: "1,10m", comprimento: "1,20m", peso: "70 KG" }
   }
 ];
 

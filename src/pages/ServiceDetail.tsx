@@ -41,23 +41,39 @@ const ServiceDetail: React.FC = () => {
               <span className="w-2 h-8 bg-brand-secondary rounded-full"></span>
               Descrição Completa
             </h2>
-            <p className="text-gray-600 text-lg leading-relaxed mb-10">
+            <p className="text-gray-600 text-lg leading-relaxed mb-10 whitespace-pre-wrap">
               {service.fullDescription}
             </p>
 
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Especificações Técnicas</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Características</h3>
             <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 mb-10">
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
                 {service.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-start gap-4">
-                    <div className="bg-brand-light p-2 rounded-lg text-brand-primary">
-                      <CheckCircle size={20} />
+                  <li key={idx} className="flex items-start gap-3">
+                    <div className="bg-brand-light p-2 rounded-lg text-brand-primary mt-1">
+                      <CheckCircle size={16} />
                     </div>
-                    <span className="text-gray-700 font-medium text-lg pt-1">{feature}</span>
+                    <span className="text-gray-700 font-medium text-base">{feature}</span>
                   </li>
                 ))}
               </ul>
             </div>
+
+            {service.specs && (
+              <>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Especificações Técnicas</h3>
+                <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 mb-10">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-8">
+                    {Object.entries(service.specs).map(([key, value]) => (
+                      <div key={key}>
+                        <span className="block text-sm font-bold text-gray-500 capitalize">{key.replace(/([A-Z])/g, ' $1')}</span>
+                        <span className="text-lg font-semibold text-gray-800">{value}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </>
+            )}
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                <div className="bg-brand-light p-6 rounded-2xl border border-green-100">

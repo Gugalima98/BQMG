@@ -8,6 +8,8 @@ const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
+  const isHeroPage = location.pathname === '/' || location.pathname.startsWith('/aluguel');
+
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
@@ -29,7 +31,7 @@ const Navbar: React.FC = () => {
   return (
     <nav 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled || isOpen ? 'bg-white/90 backdrop-blur-md shadow-md py-2' : 'bg-transparent py-4'
+        scrolled || isOpen || !isHeroPage ? 'bg-white/90 backdrop-blur-md shadow-md py-2' : 'bg-transparent py-4'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -41,7 +43,7 @@ const Navbar: React.FC = () => {
               <div className="bg-brand-primary p-2 rounded-lg group-hover:bg-brand-dark transition-colors shadow-lg">
                 <Truck className="h-6 w-6 text-white" />
               </div>
-              <span className={`font-bold text-2xl tracking-tighter transition-colors ${scrolled || isOpen || location.pathname !== '/' ? 'text-gray-900' : 'text-gray-900 md:text-white'}`}>
+              <span className={`font-bold text-2xl tracking-tighter transition-colors ${scrolled || isOpen || !isHeroPage ? 'text-gray-900' : 'text-gray-900 md:text-white'}`}>
                 BQMG
               </span>
             </Link>
@@ -54,7 +56,7 @@ const Navbar: React.FC = () => {
                 key={link.name}
                 to={link.path}
                 className={`font-medium transition-colors hover:text-brand-secondary ${
-                  scrolled || location.pathname !== '/' ? 'text-gray-600' : 'text-white/90 hover:text-white'
+                  scrolled || !isHeroPage ? 'text-gray-600' : 'text-white/90 hover:text-white'
                 }`}
               >
                 {link.name}
@@ -75,7 +77,7 @@ const Navbar: React.FC = () => {
             <button
               onClick={toggleMenu}
               className={`focus:outline-none p-2 rounded-md ${
-                scrolled || isOpen || location.pathname !== '/' ? 'text-gray-600 hover:text-brand-primary' : 'text-white hover:text-brand-secondary'
+                scrolled || isOpen || !isHeroPage ? 'text-gray-600 hover:text-brand-primary' : 'text-white hover:text-brand-secondary'
               }`}
             >
               {isOpen ? <X size={28} /> : <Menu size={28} />}

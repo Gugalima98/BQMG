@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { COMPANY_INFO } from '../constants';
 
@@ -70,12 +71,12 @@ const HeroSlider: React.FC = () => {
           >
              Orçamento Rápido
           </a>
-          <a
-            href="/servicos"
+          <Link
+            to="/servicos"
             className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white font-bold py-4 px-10 rounded-lg text-lg transition-all hover:scale-105 flex items-center justify-center"
           >
              Ver Modelos
-          </a>
+          </Link>
         </div>
       </div>
 
